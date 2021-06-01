@@ -110,7 +110,6 @@ python-dateutil==1.5
 python-decouple==3.4
 PyTweening==1.0.3
 pytz==2020.5
-pywin32==300
 pywinpty==0.5.7
 pyzmq==21.0.1
 qtconsole==5.0.2
