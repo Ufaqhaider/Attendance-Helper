@@ -1,1 +1,0 @@
-echo "web: gunicorn CCMS.wsgi--log-file -" > Procfile
