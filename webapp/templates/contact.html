@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact me </title>
+<style>
+		body,
+		html {
+              margin: 0;
+              padding: 0;
+              font-family: sans-serif;
+              background: #34495e;
+		}
+        .box{
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-60%,-50%);
+  background: #191919;
+  text-align: center;
+}
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.box input[type = "text"],.box input[type = "password"],.box input[type = "email"],.box textarea{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type = "text"]:focus,.box input[type = "password"]:focus,.box input[type = "email"]:focus,.box textarea:focus{
+  width: 280px;
+  border-color: #2ecc71;
+}
+#messages{
+        background-color: grey;
+        color: #fff;
+        padding: 10px;
+        margin-top: 10px;
+}
+.box input[type = "submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+p{
+    color: white;
+}
+.box input[type = "submit"]:hover{
+  background: #2ecc71;
+}
+h4{
+    color: white;
+}
+    </style>
+
+</head>
+<body>
+	<!--Contact form-->
+	<div style="margin:80px">
+        <form class="box" method="post">
+        {% csrf_token %}
+		<h1>Contact</h1>
+		<h4>Contact us directly if you have any questions</h4>
+		<p>
+			Please write your name, email address and a message below if you have any questions.
+			One of our staff members will be happy to contact you directly and answer your questions as soon as possible.
+		</p>
+
+            {{form.as_p}}
+            <input type="submit"></input>
+        </form>
+    </div>
+
+</body>
+</html>

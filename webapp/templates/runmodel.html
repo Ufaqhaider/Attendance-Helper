@@ -1,0 +1,41 @@
+{% csrf_token %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<HEAD>
+    <meta charset="UTF-8">
+    <title>Run Model</title>
+
+<style>
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 12px 20px;
+    width: 10%;
+}
+button:hover{
+    background-color: lightsalmon;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    width: 10%;
+    }
+</style>
+</HEAD>
+<BODY style=" margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #34495e;">
+
+<center>
+<br><br><br><br><br><br><br><br><br><br><br>
+<div class="container">
+    <a href="{% url "record" %}"><button> START </button></a>
+    <a href="{% url "save" %}"><button> Save </button></a>
+</div>
+</center>
+</BODY>
+</HTML>
